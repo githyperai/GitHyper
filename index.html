@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHyper</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Orbitron',sans-serif;
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:600px;
+      height:600px;
+      background:rgba(255,0,0,0.15);
+      filter:blur(120px);
+      top:-200px;
+      left:-150px;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:rgba(255,0,0,0.1);
+      filter:blur(120px);
+      bottom:-200px;
+      right:-100px;
+      z-index:-1;
+    }
+
+    nav{
+      width:100%;
+      padding:25px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      backdrop-filter:blur(10px);
+      background:rgba(0,0,0,0.3);
+      z-index:1000;
+    }
+
+    nav h1{
+      color:#ff2d2d;
+      font-size:28px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ff2d2d;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:0 10%;
+      position:relative;
+    }
+
+    .hero-content h2{
+      font-size:70px;
+      line-height:1.1;
+      margin-bottom:20px;
+      text-transform:uppercase;
+    }
+
+    .hero-content h2 span{
+      color:#ff2d2d;
+      text-shadow:0 0 20px #ff2d2d;
+    }
+
+    .hero-content p{
+      max-width:700px;
+      margin:auto;
+      color:#cfcfcf;
+      line-height:1.8;
+      margin-bottom:40px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 40px;
+      background:#ff2d2d;
+      border-radius:50px;
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+      box-shadow:0 0 20px rgba(255,0,0,0.5);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      box-shadow:0 0 30px rgba(255,0,0,0.8);
+    }
+
+    section{
+      padding:120px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:45px;
+      margin-bottom:60px;
+      color:#ff2d2d;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(15px);
+      border-radius:20px;
+      padding:40px 30px;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#ff2d2d;
+      box-shadow:0 0 30px rgba(255,0,0,0.2);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#ff2d2d;
+    }
+
+    .roadmap{
+      display:flex;
+      flex-direction:column;
+      gap:30px;
+    }
+
+    .roadmap-item{
+      padding:30px;
+      border-left:4px solid #ff2d2d;
+      background:rgba(255,255,255,0.04);
+      border-radius:10px;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      border-top:1px solid rgba(255,255,255,0.08);
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .hero-content h2{
+        font-size:45px;
+      }
+
+      .section-title{
+        font-size:35px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>GitHyper</h1>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>WELCOME TO <span>GITHYPER</span></h2>
+
+      <p>
+        GitHyper is building the next generation of digital innovation with futuristic infrastructure,
+        powerful community energy, and hyper-speed technology for the modern Web3 ecosystem.
+      </p>
+
+      <a href="#" class="btn">Launch Now</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">ABOUT</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Innovation</h3>
+        <p>
+          GitHyper focuses on creating futuristic solutions powered by advanced digital technology.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Community</h3>
+        <p>
+          Built with a strong community-first vision to support long-term ecosystem growth.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Future Ready</h3>
+        <p>
+          Combining AI, blockchain, and modern infrastructure into one hyper ecosystem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2 class="section-title">FEATURES</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Hyper Speed</h3>
+        <p>Fast and scalable ecosystem infrastructure.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Powered</h3>
+        <p>Smart technology integration for modern digital systems.</p>
+      </div>
+
+      <div class="card">
+        <h3>Secure Network</h3>
+        <p>Advanced protection and decentralized technology.</p>
+      </div>
+
+      <div class="card">
+        <h3>Web3 Vision</h3>
+        <p>Designed for the future generation of blockchain innovation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <h2 class="section-title">ROADMAP</h2>
+
+    <div class="roadmap">
+
+      <div class="roadmap-item">
+        <h3>Phase 1</h3>
+        <p>Project launch and community building.</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h3>Phase 2</h3>
+        <p>Marketing expansion and ecosystem growth.</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h3>Phase 3</h3>
+        <p>Strategic partnerships and AI integrations.</p>
+      </div>
+
+      <div class="roadmap-item">
+        <h3>Phase 4</h3>
+        <p>Global expansion and advanced platform development.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 GitHyper. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

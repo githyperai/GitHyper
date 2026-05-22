@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHyper Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    body{
+      background:#000;
+      color:white;
+      font-family:Arial, sans-serif;
+    }
+
+    .dashboard{
+      display:flex;
+      min-height:100vh;
+    }
+
+    /* Sidebar */
+
+    .sidebar{
+      width:260px;
+      background:#0a0a0a;
+      border-right:1px solid rgba(255,255,255,0.05);
+      padding:30px 20px;
+      position:fixed;
+      height:100%;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:#ff2d2d;
+      margin-bottom:50px;
+      text-shadow:0 0 15px #ff2d2d;
+    }
+
+    .menu{
+      list-style:none;
+    }
+
+    .menu li{
+      margin-bottom:20px;
+    }
+
+    .menu li a{
+      text-decoration:none;
+      color:#cfcfcf;
+      display:block;
+      padding:14px 18px;
+      border-radius:12px;
+      transition:0.3s;
+    }
+
+    .menu li a:hover{
+      background:#ff2d2d;
+      color:white;
+      box-shadow:0 0 20px rgba(255,45,45,0.4);
+    }
+
+    /* Main */
+
+    .main{
+      margin-left:260px;
+      width:100%;
+      padding:40px;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:40px;
+    }
+
+    .topbar h1{
+      font-size:35px;
+    }
+
+    .user-box{
+      background:#111;
+      padding:12px 20px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Cards */
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      margin-bottom:40px;
+    }
+
+    .card{
+      background:#0d0d0d;
+      border:1px solid rgba(255,255,255,0.05);
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#ff2d2d;
+      box-shadow:0 0 25px rgba(255,45,45,0.25);
+    }
+
+    .card h2{
+      font-size:40px;
+      color:#ff2d2d;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:#aaa;
+    }
+
+    /* Activity */
+
+    .activity{
+      background:#0d0d0d;
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .activity h2{
+      margin-bottom:25px;
+      color:#ff2d2d;
+    }
+
+    .activity-item{
+      padding:18px 0;
+      border-bottom:1px solid rgba(255,255,255,0.05);
+      color:#cfcfcf;
+    }
+
+    .activity-item:last-child{
+      border:none;
+    }
+
+    /* Responsive */
+
+    @media(max-width:900px){
+
+      .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+      }
+
+      .main{
+        margin-left:0;
+      }
+
+      .dashboard{
+        flex-direction:column;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+      <div class="logo">
+        GitHyper ⚡
+      </div>
+
+      <ul class="menu">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">Roadmap</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+
+    </div>
+
+    <!-- Main -->
+
+    <div class="main">
+
+      <div class="topbar">
+        <h1>Dashboard</h1>
+
+        <div class="user-box">
+          Welcome Back 🚀
+        </div>
+      </div>
+
+      <!-- Stats -->
+
+      <div class="stats">
+
+        <div class="card">
+          <h2>12K+</h2>
+          <p>Community Members</p>
+        </div>
+
+        <div class="card">
+          <h2>250K</h2>
+          <p>Total Transactions</p>
+        </div>
+
+        <div class="card">
+          <h2>98%</h2>
+          <p>Network Stability</p>
+        </div>
+
+        <div class="card">
+          <h2>24/7</h2>
+          <p>AI Infrastructure</p>
+        </div>
+
+      </div>
+
+      <!-- Activity -->
+
+      <div class="activity">
+
+        <h2>Latest Activity</h2>
+
+        <div class="activity-item">
+          🚀 GitHyper website officially launched.
+        </div>
+
+        <div class="activity-item">
+          🔥 Community reached 12K+ members.
+        </div>
+
+        <div class="activity-item">
+          🤖 AI infrastructure successfully integrated.
+        </div>
+
+        <div class="activity-item">
+          🌍 New strategic partnerships announced.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
